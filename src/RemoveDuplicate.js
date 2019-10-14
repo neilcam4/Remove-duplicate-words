@@ -1,10 +1,13 @@
-function removeDuplicateWords(string){
+function splitString(string){
     var newArray = string.split(' ').sort()
- 
-// if (string.length > 0) {
-//     newArray.forEach(function(item){
-//         newArray.push(item)
-//     })
     return newArray
-// }
+}
+
+function removeDuplicateWords(string){
+    var newArray = splitString(string)
+    var result = []
+if(newArray.length > 0){
+    result.push(newArray[0])
+}
+    return result
 }

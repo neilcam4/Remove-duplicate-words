@@ -1,15 +1,15 @@
 describe('remove duplicate strings', function(){
     it('describes sort dtring into individual words', function(){
         var string = 'alpha beta gamma gamma'
-        var result = removeDuplicateWords(string)
+        var result = splitString(string)
         expect(result).toEqual(['alpha', 'beta', 'gamma', 'gamma'])
     })
     it('sorts array into alphabetical order', function(){
         var string = 'alpha beta gamma gamma alpha'
-        var result = removeDuplicateWords(string)
+        var result = splitString(string)
         expect(result).toEqual(['alpha', 'alpha', 'beta', 'gamma', 'gamma'])
     })
-    it('should check if not duplicate and push to array', function(){
+    it('should return first in array in new array', function(){
         var string = 'alpha beta gamma gamma alpha'
         var result = removeDuplicateWords(string)
         expect(result).toEqual(['alpha'])
