@@ -9,10 +9,15 @@ describe('remove duplicate strings', function(){
         var result = splitString(string)
         expect(result).toEqual(['alpha', 'alpha', 'beta', 'gamma', 'gamma'])
     })
-    it('should return first in array in new array', function(){
+    it('should push word into new array if not included', function(){
         var string = 'alpha beta gamma gamma alpha'
         var result = removeDuplicateWords(string)
-        expect(result).toEqual(['alpha'])
+        expect(result).toEqual('alpha beta gamma')
+    })
+    it('should return output as a single string', function(){
+        var string = 'alpha beta gamma gamma alpha'
+        var result = removeDuplicateWords(string)
+        expect(result).toEqual('alpha beta gamma')
     })
 })
 

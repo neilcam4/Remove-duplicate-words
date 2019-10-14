@@ -5,9 +5,16 @@ function splitString(string){
 
 function removeDuplicateWords(string){
     var newArray = splitString(string)
+    console.log(newArray)
     var result = []
-if(newArray.length > 0){
-    result.push(newArray[0])
+newArray.forEach(function(item){
+    if(result.includes(item) == false){
+        result.push(item)
+        console.log(result)
+    }  
+})
+console.log(result.join(','))
+return result.join(' ')
 }
-    return result
-}
+
+
